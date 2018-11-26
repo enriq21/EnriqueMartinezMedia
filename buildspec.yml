@@ -1,7 +1,7 @@
 version: 0.1
 environment_variables:
     plaintext:
-        S3_BUCKET: "enriquemartinezmedia.com"
+        S3_BUCKET: "codepipeline-us-east-1-409261074844"
 phases:
     install:
         commands:
