@@ -1,0 +1,29 @@
+<app-header class="sticky"></app-header>
+
+
+<section class="photo-gallery" *ngIf="gallery">
+  <div class="container">
+
+    <section class="photo-gallery__headline">
+      <h1>{{ gallery.name }}</h1>
+    </section>
+
+    <section class="photo-gallery__content">
+
+      <div class="col-sm-4 gallery-thumb" style="overflow:hidden;" *ngFor="let image of gallery">
+          
+          <div class="thumb-wrapper" style="overflow:hidden;">
+            <img FrameImage frameType="fill" [src]="image.url" (click)="openPhotoSingleModal(image._id)" class="gallery-image">
+          </div>
+
+          <span class="thumb-caption">{{ image.caption }}</span>
+
+      </div>
+  
+    </section>
+
+  </div>
+
+</section>
+
+<app-footer></app-footer>

@@ -1,0 +1,20 @@
+.contact-form {
+    background:#000;
+    color:#dbedf3;
+
+    label {
+        color: #dbedf3;
+        font-size: 14px;
+        // letter-spacing: 2px;
+        font-weight: 300;
+        text-transform: capitalize;
+    }
+
+    input[type=text].form-control {
+        max-width:500px;
+    }
+    
+    input[type=tel].form-control {
+        max-width:150px;
+    }
+}

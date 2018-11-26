@@ -1,0 +1,24 @@
+.contact {
+    background:#000;
+    color:#dbedf3;
+    padding-top:210px;
+    padding-bottom:80px;
+
+    &__headline{
+        h1 {
+            font-size:16px;
+            font-weight:300;
+            letter-spacing: 5px;
+            margin:10px auto 30px;
+        }
+    }
+
+    &__summary {
+        padding-bottom:60px;
+
+        h2 {
+            line-height: 55px;
+            letter-spacing: 1px;
+        }
+    }
+}

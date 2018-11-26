@@ -1,0 +1,14 @@
+:host {
+    display:flex;
+    flex-grow:1;
+    align-items:center;
+    font-size:36px;
+
+    span {
+        color:#fff;
+        cursor:pointer;
+        &:hover {
+            color:#dbedf3;
+        }
+    }
+}

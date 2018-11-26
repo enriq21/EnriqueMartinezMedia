@@ -1,0 +1,37 @@
+
+.menu {
+        height: 80px;
+        background:#000;
+
+    &__list {
+        display:flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        list-style: none;
+
+        &:last-child {
+            a {
+                margin-right:0;
+            }
+        }
+        
+        a {
+            color:#dbedf3;
+        }
+    }
+
+    &__item {
+        font-size:24px;
+        font-weight:300;
+        height:80px;
+        line-height:80px;
+        margin:0 30px;
+        align-self:flex-end;
+
+        &.active {
+            text-decoration:underline;
+            color:#fff;
+        }
+    }
+
+}

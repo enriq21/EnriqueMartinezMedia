@@ -1,0 +1,12 @@
+<ngb-carousel #photomodal *ngIf="gallery" class="single-photo-modal">
+  <ng-template ngbSlide *ngFor="let image of gallery">
+    
+    <div class="image-wrapper">
+
+      <img [src]="image.url" alt="{{image.caption}}">
+      <!-- <div class="loadee"></div> -->
+      
+    </div>
+
+  </ng-template>
+</ngb-carousel> 

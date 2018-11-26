@@ -1,0 +1,75 @@
+/* You can add global styles to this file, and also import other style files */
+
+body, html {
+    height:100%;
+}
+
+
+// Shared Styles
+
+.article-photo {
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center; 
+    margin:40px 0;
+
+    img {
+        display:flex;
+        @media (min-width:992px) {
+            max-width: 75%;
+            max-height:75vh;
+            display:flex;
+        }
+    }
+
+    .caption {
+        font-size:12px;
+        line-height:14px;
+        font-style: italic;
+        padding:15px 0;
+
+        @media (min-width:992px) {
+            max-width: 70%;
+            display:flex;
+        }
+    }
+}
+
+// Start: Frame it Directive
+
+.preFadeIn {
+    opacity: 0;
+}
+
+.fadeIn {
+    transition: opacity 1s;
+}
+
+.frame {
+    position:relative;
+    overflow:hidden;
+    .loadee {
+        position:absolute;
+        top:50%;
+        left:50%;
+        z-index:0;
+        margin:-10px 0 0 -10px;
+    }
+}
+
+.hideLoadee .loadee {
+    display:none;
+}
+
+// Loadee
+.loadee {
+    border:1px solid #ccc;
+    border-top:1px soli #aaa;
+    border-radius:50%;
+    width:20px;
+    height:20px;
+    animation: spin .8s linear infinite;
+    display:inline-block;
+}
+// End: Frame it Directive

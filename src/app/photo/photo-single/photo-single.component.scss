@@ -1,0 +1,13 @@
+.single-photo {
+    background:#000;
+    padding-top:150px;
+    h3 {
+        color:#fff;
+    }
+    img {
+        max-width: 66vw;
+        max-height:66vh;
+        margin:10px auto 0;
+        display:flex;
+    }
+}

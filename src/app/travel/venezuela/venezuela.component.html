@@ -1,0 +1,190 @@
+
+
+<div class="case-study">
+  <section class="case-study__featured-image">
+    <img src="/src/assets/travel/venezuela/venezuela-featured-image-1.jpg">
+  </section>
+
+  <app-header StickyElement> </app-header>
+
+  <section class="case-study__overview">
+      <div class="case-study__overview-wrapper">
+        <div class="container">
+			
+		<div class="case-study__overview__titles-wrapper">
+			<div class="case-study__overview__brief">Travel</div>        
+			<div class="case-study__overview__title">Venezuela</div>
+		</div>
+
+          <div class="case-study__overview__details-wrapper">
+            <div class="row">
+
+                <div class="col-sm-8 case-study__overview__description">
+              
+                    <p>I've now been to Venezuela twice.  I imagine I'll return at some point in the future, at least I would love to.  People
+                      from Venezuela know how to make the best of a terrible situation, and for that they have earned my utmost respect.  
+                    </p>
+
+                    <p>
+                        My first trip, I had the privilige of road tripping across the country many years back.  My wife's family showed me wonderful time, 
+                        They took me to some of the most beautiful places I have ever been to in my life.
+                    </p>
+
+                </div>
+
+                <div class="col-sm-4 case-study__overview__details">
+
+                  <span class="project-details">Details</span>
+        
+                  <div class="detail-list-item">
+                    <div class="label">Years:</div>
+                    <div class="description">2011 &  2013</div>
+                  </div>
+
+                  <div class="detail-list-item">
+                    <div class="label">Visited:</div>
+                    <div class="description">Caracas<br>Guanare<br>Mochima<br>Cueva De Guacharos<br>Puerto La Cruz</div>
+                  </div>
+                  
+                </div>
+            </div>
+
+        </div>
+        </div>
+      </div>
+
+  </section>
+
+  <div class="case-study__image-separator">
+      <img src="/src/assets/travel/venezuela/venezuela-featured-image-2.jpg">
+  </div>
+
+  <div class="case-study__text-box">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 text-box">
+
+          <div class="section-headline">
+            Mochima & Puerto La Cruz
+          </div>
+
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce odio ante, vulputate fringilla sem ut, porttitor consequat erat. 
+            Aliquam quam urna, tempus quis est sed, laoreet blandit tellus. Cras nec turpis et velit rutrum viverra vitae quis leo. 
+            Quisque faucibus in neque id egestas. Morbi luctus maximus mi, eu ultrices velit tristique id. Mauris nec placerat leo, sit amet eleifend quam.
+
+          </p>  
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="case-study__image-separator height-auto">
+    <img src="/src/assets/travel/venezuela/mochima-playa-blanca-pano.jpg">
+  </div>
+  
+  <div class="case-study__text-box">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 section-headline">
+          Marian Castellazi
+        </div>
+        <div class="col-sm-12 text-box text-box--two-columns">
+          One of the first days in Venezuela we went out to see Marian perform some songs at a local venue.  I was completely floored, she was one of the best 
+          singers I had ever seen in person.  One night we setup a small stage and recorded a set of videos.  I had
+          just got a new mic and camera so I was really excited to do a shoot with it.  The vibes that night still give me chills today.  I'm proud of the set of videos that came out of it.
+          Her voice still blows me away.
+
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <div class="youtube-video-wrapper">
+    <iframe class="youtube-video stretch" src="https://www.youtube.com/embed/3Sm9TTfi3oo?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  </div>
+
+  <div class="case-study__text-box">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 section-headline">
+          Research
+        </div>
+        <div class="col-sm-12 text-box text-box--two-columns">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce odio ante, vulputate fringilla sem ut, porttitor consequat erat. Aliquam quam urna, tempus quis est sed, laoreet blandit tellus. Cras nec turpis et velit rutrum viverra vitae quis leo. Quisque faucibus in neque id egestas. Morbi luctus maximus mi, eu ultrices velit tristique id. Mauris nec placerat leo, sit amet eleifend quam.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="case-study__split-gallery">
+ 
+    <!-- End: Split Gallery -->
+
+      <!-- <img src="/src/assets/travel/india-carousel-taj-1.jpg"> -->
+      <ngb-carousel class="split-gallery" *ngIf="images" [showNavigationArrows]="true" [showNavigationIndicators]="false">
+        <ng-template ngbSlide *ngFor="let image of images">
+
+          <div class="split-gallery__captions">
+
+            <div class="caption-wrapper">
+      
+              <span class="section-headline">
+                  <p>{{image.caption}}</p>
+              </span>
+      
+              <span class="caption-text">
+                <p>{{image.detail}}</p>
+              </span>
+      
+              <div class="gallery-controls">
+                <div class="previous-arrow">
+                    <fa-icon [icon]="faAngleLeft"></fa-icon>
+                </div>
+                <div class="image-count">2 / 6</div>
+                <div class="next-arrow">
+                    <fa-icon [icon]="faAngleRight"></fa-icon>
+                </div>
+              </div>
+              
+            </div>
+            <!-- End: Caption Wrapper -->
+      
+          </div>
+
+          <div class="split-gallery__carousel-images">      
+            <img [src]="image.url" alt="image.caption">
+          </div>
+        
+          <!-- <div class="carousel-caption">
+          <h3>Slide Name</h3>
+          <p>{{ image.caption }}</p>
+          </div> -->
+        </ng-template>
+      </ngb-carousel>  
+
+  </div>
+
+  <div class="case-study__video-row" style="display:none;">
+    <video width="100%" autoplay loop>
+      <source src="assets/travel/india-background-video-holi.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <div class="case-study__centered-gallery">
+    <!-- <img src="/src/assets/travel/india-carousel-taj-1.jpg"> -->
+    <ngb-carousel *ngIf="images" [showNavigationArrows]="true" [showNavigationIndicators]="false">
+      <ng-template ngbSlide *ngFor="let image of images">
+      <div class="container d-flex">
+        <div class="col-sm-8" style="margin:0px auto;">      
+          <img style="display:block;max-width:100%;margin:80px auto;" [src]="image.url" alt="image.caption">
+        </div>
+      </div>
+      </ng-template>
+    </ngb-carousel>  
+
+  </div>
+  <!-- End: Centered Gallery -->
+  
+</div>
+
+<app-footer></app-footer>

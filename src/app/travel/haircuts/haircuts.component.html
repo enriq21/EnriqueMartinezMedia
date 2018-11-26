@@ -1,0 +1,161 @@
+
+
+<div class="case-study">
+  <section class="case-study__featured-image">
+    <img src="/src/assets/travel/panama/panama-featured-image.jpg">
+  </section>
+
+  <app-header StickyElement> </app-header>
+
+  <section class="case-study__overview">
+      <div class="case-study__overview-wrapper">
+        <div class="container">
+          <div class="case-study__overview__titles-wrapper">
+              <div class="case-study__overview__brief">Travel</div>        
+              <div class="case-study__overview__title">The Haircut Thing</div>
+          </div>
+          <div class="case-study__overview__details-wrapper">
+            <div class="row">
+                <div class="col-sm-8 case-study__overview__description">
+              
+                    <p>I'm really not sure why I do it, to be honest.  The first few haircuts were just out of necessity, and timing wise, it just worked out that
+                      that we were traveling.  Today, its definitely something I'll go out of way to do. In some cases, letting my hair grow a little unruly to give myself a reason to go somewhere new. 
+                      Unfortunately, I didn't really document the first couple cuts. So far though, the list is still pretty short and I'm excited to keep adding to it.
+                    </p>
+        
+                </div>        
+                <div class="col-sm-4 case-study__overview__details">
+                  <span class="project-details">Details:</span>
+        
+                  <!-- <div class="detail-list-item">
+                    <div class="label">Yer:</div>
+                    <div class="description">Compass</div>
+                  </div>
+                  <div class="detail-list-item">
+                    <div class="label">Client:</div>
+                    <div class="description">United Airlines</div>
+                  </div>
+                  <div class="detail-list-item">
+                    <div class="label">Deliverable:</div>
+                    <div class="description">Angular Web Application</div>
+                  </div> -->
+                  <div class="detail-list-item">
+                    <div class="label">Year:</div>
+                    <div class="description">2012 - Ongoing</div>
+                  </div>
+                  <div class="detail-list-item">
+                    <div class="label">Haircuts in:</div>
+                    <div class="description">Guanare, Venezuela <br> Panama City, Panama <br> London, England <br> Mumbai, India</div>
+                  </div>
+                </div>
+            </div>
+
+        </div>
+        </div>
+      </div>
+
+  </section>
+
+  <div class="case-study__image-separator">
+      <img src="/src/assets/travel/india-background-image-1.jpg">
+  </div>
+
+  <div class="case-study__text-box">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 text-box">
+
+          <p>
+            Growing up, my dad would cut my hair, and for a while I wouldn't really want to trust anyone else to do the job.
+          </p>
+          <br>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce odio ante, vulputate fringilla sem ut, porttitor consequat erat. Aliquam quam urna, tempus quis est sed, laoreet blandit tellus. Cras nec turpis et velit rutrum viverra vitae quis leo. Quisque faucibus in neque id egestas. Morbi luctus maximus mi, eu ultrices velit tristique id. Mauris nec placerat leo, sit amet eleifend quam.</p>  
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="case-study__split-gallery">
+    
+
+    <!-- End: Split Gallery -->
+
+        <!-- <img src="/src/assets/travel/india-carousel-taj-1.jpg"> -->
+        <ngb-carousel class="split-gallery" *ngIf="images" [showNavigationArrows]="true" [showNavigationIndicators]="false">
+          <ng-template ngbSlide *ngFor="let image of images">
+
+            <div class="split-gallery__captions">
+
+              <div class="caption-wrapper">
+        
+                <span class="section-headline">
+                    <p>{{image.caption}}</p>
+                </span>
+        
+                <span class="caption-text">
+                  <p>{{image.detail}}</p>
+                </span>
+        
+                <!-- <div class="gallery-controls">
+                  <div class="previous-arrow">
+                      <fa-icon [icon]="faAngleLeft"></fa-icon>
+                  </div>
+                  <div class="image-count">2 / 6</div>
+                  <div class="next-arrow">
+                      <fa-icon [icon]="faAngleRight"></fa-icon>
+                  </div>
+                </div> -->
+                
+              </div>
+              <!-- End: Caption Wrapper -->
+        
+            </div>
+
+            <div class="split-gallery__carousel-images">      
+              <img [src]="image.url" alt="image.caption">
+            </div>
+          
+            <!-- <div class="carousel-caption">
+            <h3>Slide Name</h3>
+            <p>{{ image.caption }}</p>
+            </div> -->
+          </ng-template>
+        </ngb-carousel>  
+
+  </div>
+
+  <div class="case-study__text-box">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 section-headline">
+          Research
+        </div>
+        <div class="col-sm-12 text-box text-box--two-columns">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce odio ante, vulputate fringilla sem ut, porttitor consequat erat. Aliquam quam urna, tempus quis est sed, laoreet blandit tellus. Cras nec turpis et velit rutrum viverra vitae quis leo. Quisque faucibus in neque id egestas. Morbi luctus maximus mi, eu ultrices velit tristique id. Mauris nec placerat leo, sit amet eleifend quam.
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="case-study__video-row">
+      <video width="100%" autoplay loop>
+        <source src="assets/travel/india-background-video-holi.mp4" type="video/mp4">
+      </video>
+  </div>
+
+  <div class="case-study__text-box">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 section-headline">
+          Research
+        </div>
+        <div class="col-sm-12 text-box text-box--two-columns">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce odio ante, vulputate fringilla sem ut, porttitor consequat erat. Aliquam quam urna, tempus quis est sed, laoreet blandit tellus. Cras nec turpis et velit rutrum viverra vitae quis leo. Quisque faucibus in neque id egestas. Morbi luctus maximus mi, eu ultrices velit tristique id. Mauris nec placerat leo, sit amet eleifend quam.
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<app-footer></app-footer>

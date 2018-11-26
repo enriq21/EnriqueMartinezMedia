@@ -1,0 +1,74 @@
+.photo-galleries {
+    background:#000;
+    color:#dbedf3;
+    padding-top:210px;
+    padding-bottom:140px;
+
+
+    &__headline{
+        h1 {
+            font-size:16px;
+            font-weight:300;
+            letter-spacing: 5px;
+            margin:10px auto 30px;
+        }
+    }
+
+    &__summary {
+        padding-bottom:125px;
+
+        h2 {
+            line-height: 55px;
+            letter-spacing: 1px;
+        }
+    }
+
+    &__content {
+        width:100%;
+        display: flex;
+        flex-direction:row;
+        align-items: flex-start;
+        justify-content:space-between;
+        flex-wrap: wrap;
+        clear:both;
+
+        .gallery-wrapper {
+            display:flex;
+            flex-direction:column;
+            margin-bottom:30px;
+
+            .gallery-image {
+                cursor:pointer;         
+                outline:none !important;
+
+                img {
+                    max-width:100%;
+                    opacity:.85;
+                    border-radius:4px;
+                    outline:none !important;
+                }      
+                
+                &:hover {
+                    img {
+                        opacity: 1;
+                    }
+                }
+            }
+     
+            .gallery-description {
+                margin-top:15px;
+                color:#dbedf3;
+                font-size:17px;
+            }
+    
+            .gallery-name {
+                color:#a0a0a0;
+                font-size:12px;
+                font-weight:600;
+            }
+    
+        }
+
+    }
+
+}

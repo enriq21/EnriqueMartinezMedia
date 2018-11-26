@@ -1,0 +1,38 @@
+<app-header class="sticky"></app-header>
+
+<section class="photo-galleries">
+  <div class="container">
+
+    <section class="photo-galleries__headline">
+      <h1>PHOTOGRAPHY</h1>
+    </section>
+
+    <section class="photo-galleries__summary row">
+        <div class="col-sm-8">
+        <h2>
+          I have way more pictures than I know what to do with, or how to organize.
+          Below, I am trying to group some of my favorite pictures into more digestable portions.  There are plenty missing, and I will continue to update this in the future.
+        </h2>
+        </div>
+      </section>
+
+
+    <section class="photo-galleries__content" *ngIf="galleries">
+
+      <div class="col-sm-4 gallery-wrapper" *ngFor="let gallery of galleries">
+          
+          <div class="gallery-image" [routerLink]="['/photography','galleries',gallery._id]"> <img [src]="gallery.thumbnail" class="" /> </div>
+
+          <span class="gallery-description">{{ gallery.description }}</span>
+
+          <span class="gallery-name">{{ gallery.name }}</span>
+
+	  </div>
+	  
+    </section>
+
+  </div>
+
+</section>
+
+<app-footer></app-footer>
