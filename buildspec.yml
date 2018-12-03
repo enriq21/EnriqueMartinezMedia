@@ -1,6 +1,6 @@
 version: 0.2
 env:
-    variables:
+variables:
         S3_BUCKET: "www.enriquemartinezmedia.com",
         ENV: "prod"
 phases:
