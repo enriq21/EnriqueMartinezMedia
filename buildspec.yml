@@ -1,8 +1,10 @@
 version: 0.2
 env:
-variables:
-        S3_BUCKET: "www.enriquemartinezmedia.com",
-        ENV: "prod"
+    variables:
+        CACHE_CONTROL: "86400"
+        S3_BUCKET: "www.enriquemartinezmedia.com"
+        BUILD_FOLDER: "dist"
+        BUILD_ENV: "prod"
 phases:
     install:
         commands:
@@ -11,16 +13,19 @@ phases:
             - npm install -g @angular/cli
     build:
         commands:
+            # Builds Angular application.
             - echo Build started on `date`
-            - ng build --${ENV} 
+            - ng build --${BUILD_ENV}
     post_build:
          commands:
-            # Emptying the s3 bucket
-            - aws s3 rm s3://${S3_BUCKET} --recursive - echo S3 bucket is cleared.
-            - aws s3 cp dist s3://${S3_BUCKET} --recursive
+            # Clear S3 bucket.
+            - aws s3 rm s3://${S3_BUCKET} --recursive
+            - echo S3 bucket is cleared.
+            # Copy dist folder to S3 bucket
+            - aws s3 cp ${BUILD_FOLDER} s3://${S3_BUCKET} --recursive
             - echo Build completed on `date`
 artifacts:
     files:
         - '**/*'
-    base-directory: './dist/*'
+    base-directory: 'dist*'
     discard-paths: yes
