@@ -10,6 +10,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { RouterModule } from '@angular/router';
 import { StickyElementDirective } from '../shared/directives/sticky-element.directive';
 import { FrameImageDirective } from '../shared/directives/frame-image.directive';
+import { CoreComponent } from './core.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { FrameImageDirective } from '../shared/directives/frame-image.directive'
     FooterComponent,
     SocialLinksComponent,
     ContactFormComponent,
+    CoreComponent,
     StickyElementDirective,
     FrameImageDirective
   ],
